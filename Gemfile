@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'haml-rails'
+gem 'rubocop'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -38,6 +39,14 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'rspec-json_matcher', require: false
+  gem 'rspec_junit_formatter'
+  gem 'shoulda-matchers'
+  gem 'selenium-webdriver'
 end
 
 group :development do
