@@ -1,0 +1,34 @@
+{
+  "name": "pig-book",
+  "version": "1.0.0",
+  "description": "account book pig with react",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint",
+    "eslint": "eslint",
+    "release": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaekasui/cryuni_sim.git"
+  },
+  "author": "kaekasui",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "webpack": "^4.7.0",
+    "webpack-cli": "^2.1.2"
+  }
+}
