@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default class Home extends React.Component {
+export default class Input extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div className="homeComponent">
-        {'home'}
+      <div className="inputComponent">
+        {'input'}
       </div>
     )
   }
