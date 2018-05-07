@@ -1,21 +1,28 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-class PigBook extends React.Component {
+import Menu from './menu'
+import MainContent from './main_content'
+
+class App extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div className="PigBookComponent">
-        {'PIG BOOK: hello world!'}
+      <div className="appComponent">
+        <Menu />
+        <MainContent />
       </div>
     )
   }
 }
 
-render(
-  <PigBook url='/' />,
-  document.getElementById('content')
+render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('content')
 )
