@@ -18,6 +18,7 @@ gem 'rubocop'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'rails-i18n'
 
 gem 'omniauth-twitter'
 
@@ -37,9 +38,13 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'database_rewinder'
   gem 'rspec-rails'
   gem 'rspec-json_matcher', require: false
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers'
+  gem 'simplecov'
   gem 'selenium-webdriver'
 end
