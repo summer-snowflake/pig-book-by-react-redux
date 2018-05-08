@@ -22,4 +22,5 @@
 
 /app/assets/javascripts/application.js
 
+/coverage
 .env
