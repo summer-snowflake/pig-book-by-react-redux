@@ -8,7 +8,9 @@ export default class Login extends React.Component {
   render() {
     return (
       <div className="loginComponent">
-        {'login'}
+        <a className='btn btn-primary' href='auth/twitter'>
+          <span>{'Twitterでログイン'}</span>
+        </a>
       </div>
     )
   }
