@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20180507161301) do
 
   create_table "auths", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "provider", null: false
+    t.integer "provider", null: false
     t.string "uid"
     t.string "name"
     t.string "nickname"
