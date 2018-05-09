@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180507161301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "auths", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "provider", null: false
+    t.string "uid"
+    t.string "name"
+    t.string "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_auths_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "access_token"
+    t.datetime "last_sign_in_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "auths", "users"
 end

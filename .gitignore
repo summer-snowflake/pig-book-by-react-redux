@@ -21,3 +21,6 @@
 /frontend/node_modules/
 
 /app/assets/javascripts/application.js
+
+/coverage
+.env
