@@ -1,10 +1,10 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './home'
-import DashBoard from './dash_board'
-import List from './list'
-import Input from './input'
+import Home from './home/home'
+import DashBoard from './dash_board/dash_board'
+import List from './list/list'
+import Input from './input/input'
 import Login from './account/login'
 
 export default class MainContent extends React.Component {
