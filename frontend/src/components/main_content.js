@@ -5,7 +5,7 @@ import Home from './home'
 import DashBoard from './dash_board'
 import List from './list'
 import Input from './input'
-import CategoriesList from './CategoriesList'
+import CategoriesList from './categories/CategoriesList'
 import Login from './account/login'
 
 export default class MainContent extends React.Component {
