@@ -2,8 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import Menu from './menu'
-import MainContent from './main_content'
+import PigBookContainer from './containers/PigBookContainer'
 
 class App extends React.Component {
   constructor(props) {
@@ -13,8 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="appComponent">
-        <Menu />
-        <MainContent />
+        <PigBookContainer />
       </div>
     )
   }
