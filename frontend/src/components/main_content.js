@@ -5,6 +5,7 @@ import Home from './home'
 import DashBoard from './dash_board'
 import List from './list'
 import Input from './input'
+import CategoriesList from './CategoriesList'
 import Login from './account/login'
 
 export default class MainContent extends React.Component {
@@ -20,6 +21,7 @@ export default class MainContent extends React.Component {
           <Route component={DashBoard} path='/dashboard' />
           <Route component={List} path='/list' />
           <Route component={Input} path='/input' />
+          <Route component={CategoriesList} path='/categories' />
           <Route component={Login} path='/login' />
         </Switch>
       </div>
