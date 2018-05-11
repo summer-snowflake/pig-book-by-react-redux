@@ -2,6 +2,7 @@
 
 class User < ApplicationRecord
   has_one :auth, dependent: :destroy
+  has_many :categories, dependent: :destroy
 
   def self.find_or_create_for_oauth(oauth, token)
     ActiveRecord::Base.transaction do
