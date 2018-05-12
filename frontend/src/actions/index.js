@@ -4,6 +4,6 @@ export const render = () => {
   return { type: types.RENDER }
 }
 
-export const loadCategories = () => {
-  return { type: types.CATEGORIES }
+export const fetchCategories = () => {
+  return { type: types.FETCH_CATEGORIES }
 }

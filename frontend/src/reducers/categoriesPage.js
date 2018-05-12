@@ -1,13 +1,11 @@
-import { CATEGORIES } from './../utils/actionTypes.js'
+import { FETCH_CATEGORIES } from './../utils/actionTypes.js'
 
-const initialAppState = {
-  value: []
-}
+const initialAppState = []
 
 function categoriesPage(state = initialAppState, action) {
   switch (action.type) {
-  case CATEGORIES:
-    return { value: [{name: 'NAME', balance_of_payments: true}] }
+  case FETCH_CATEGORIES:
+    return [{name: 'NAME', balance_of_payments: true}]
   default:
     return state
   }

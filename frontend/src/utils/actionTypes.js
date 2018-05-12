@@ -1,2 +1,2 @@
 export const RENDER = 'RENDER'
-export const CATEGORIES = 'CATEGORIES'
+export const FETCH_CATEGORIES = 'FETCH_CATEGORIES'
