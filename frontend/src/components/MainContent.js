@@ -10,14 +10,16 @@ import Login from './account/login'
 
 const MainContent = () => {
   return (
-    <Switch>
-      <Route component={Home} exact path='/' />
-      <Route component={DashBoard} exact path='/dashboard' />
-      <Route component={Input} exact path='/input' />
-      <Route component={List} exact path='/list' />
-      <Route component={Categories} exact path='/categories' />
-      <Route component={Login} exact path='/login' />
-    </Switch>
+    <div className='main-content-component'>
+      <Switch>
+        <Route component={Home} exact path='/' />
+        <Route component={DashBoard} exact path='/dashboard' />
+        <Route component={Input} exact path='/input' />
+        <Route component={List} exact path='/list' />
+        <Route component={Categories} exact path='/categories' />
+        <Route component={Login} exact path='/login' />
+      </Switch>
+    </div>
   )
 }
 
