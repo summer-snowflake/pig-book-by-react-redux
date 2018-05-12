@@ -1,12 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './Home'
-import DashBoard from './DashBoard'
-import List from './List'
-import Input from './Input'
-import CategoriesList from './categories/CategoriesList'
-import Login from './account/Login'
+import Home from './home'
+import DashBoard from './dash_board'
+import Input from './input'
+import List from './list'
+import CategoriesList from './categories/categories'
+import Login from './account/login'
 
 const MainContent = () => {
   return (
