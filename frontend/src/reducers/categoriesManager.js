@@ -2,7 +2,7 @@ import { FETCH_CATEGORIES } from './../utils/actionTypes.js'
 
 const initialAppState = []
 
-function categoriesPage(state = initialAppState, action) {
+function categoriesManager(state = initialAppState, action) {
   switch (action.type) {
   case FETCH_CATEGORIES:
     return [{name: 'NAME', balance_of_payments: true}]
@@ -11,4 +11,4 @@ function categoriesPage(state = initialAppState, action) {
   }
 }
 
-export default categoriesPage
+export default categoriesManager
