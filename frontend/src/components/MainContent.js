@@ -8,9 +8,7 @@ import Input from './Input'
 import CategoriesList from './categories/CategoriesList'
 import Login from './account/Login'
 
-const MainContent = (props) => {
-  const type = props.types.value
-
+const MainContent = () => {
   return (
     <Switch>
       <Route component={Home} exact path='/' />
