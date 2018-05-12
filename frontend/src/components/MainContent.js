@@ -5,7 +5,7 @@ import Home from './home'
 import DashBoard from './dash_board'
 import Input from './input'
 import List from './list'
-import CategoriesList from './categories/categories'
+import Categories from './../containers/categories/categoriesContainer'
 import Login from './account/login'
 
 const MainContent = () => {
@@ -15,7 +15,7 @@ const MainContent = () => {
       <Route component={DashBoard} exact path='/dashboard' />
       <Route component={Input} exact path='/input' />
       <Route component={List} exact path='/list' />
-      <Route component={CategoriesList} exact path='/categories' />
+      <Route component={Categories} exact path='/categories' />
       <Route component={Login} exact path='/login' />
     </Switch>
   )
