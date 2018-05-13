@@ -8,7 +8,7 @@ const MainMenu = (props) => {
   return (
     <div className="main-menu-component">
       <ul>
-        <li><Link onClick={handleClickMenu} to='/'>{'Home'}</Link></li>
+        <li><Link onClick={handleClickMenu} to='/'>{'HOME'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/dashboard'>{'ダッシュボード'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/list'>{'リスト'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/input'>{'入力する'}</Link></li>

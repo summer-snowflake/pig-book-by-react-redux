@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import mainMenu from './mainMenu'
+import categoriesManager from './categoriesManager'
 
 const rootReducer = combineReducers({
-  mainMenu
+  mainMenu,
+  categoriesManager
 })
 
 export default rootReducer
