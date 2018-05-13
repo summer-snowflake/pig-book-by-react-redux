@@ -7,6 +7,7 @@ import Input from './input'
 import List from './list'
 import Categories from './../containers/categories/categoriesContainer'
 import Login from './account/login'
+import SignIn from './../containers/account/signInContainer'
 
 const MainContent = () => {
   return (
@@ -18,6 +19,7 @@ const MainContent = () => {
         <Route component={List} exact path='/list' />
         <Route component={Categories} exact path='/categories' />
         <Route component={Login} exact path='/login' />
+        <Route component={SignIn} exact path='/sign_in' />
       </Switch>
     </div>
   )

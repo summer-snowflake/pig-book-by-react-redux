@@ -4,6 +4,10 @@ export const render = () => {
   return { type: types.RENDER }
 }
 
+export const setAccessToken = () => {
+  return { type: types.SET_ACCESS_TOKEN }
+}
+
 export const getCurrentUser = () => {
   return { type: types.CURRENT_USER }
 }
