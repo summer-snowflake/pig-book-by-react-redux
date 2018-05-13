@@ -12,6 +12,11 @@ const MainMenu = (props) => {
         <li><Link onClick={handleClickMenu} to='/dashboard'>{'ダッシュボード'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/list'>{'リスト'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/input'>{'入力する'}</Link></li>
+        { props.store.user ? (
+          <li><Link onClick={handleClickMenu} to='/mypage'>{props.store.user.auth.name}</Link></li>
+        ) : (
+          null
+        )}
         <li><Link onClick={handleClickMenu} to='/categories'>{'カテゴリ'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/login'>{'ログイン'}</Link></li>
       </ul>

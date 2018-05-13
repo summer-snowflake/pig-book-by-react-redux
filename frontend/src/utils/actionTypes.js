@@ -1,2 +1,4 @@
 export const RENDER = 'RENDER'
+export const CURRENT_USER = 'CURRENT_USER'
+
 export const FETCH_CATEGORIES = 'FETCH_CATEGORIES'
