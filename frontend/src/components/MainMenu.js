@@ -26,7 +26,8 @@ const MainMenu = (props) => {
 
 // TODO: 効果について要確認
 MainMenu.propTypes = {
-  actions: PropTypes.func
+  actions: PropTypes.func,
+  store: PropTypes.object
 }
 
 export default MainMenu
