@@ -5,13 +5,14 @@ const initialAppState = {
 }
 
 function mainMenu(state = initialAppState, action) {
+  let user = { auth: { name: '名前' } }
+  state = { value: '', user: user }
+
   switch (action.type) {
   case RENDER:
-    return { value: '' }
-  case CURRENT_USER: {
-    let user = { auth: { name: '名前' } }
-    return { user: user }
-  }
+    return state
+  case CURRENT_USER:
+    return state
   default:
     return state
   }
