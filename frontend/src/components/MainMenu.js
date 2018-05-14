@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 const MainMenu = (props) => {
   let handleClickMenu = props.actions.render
+  console.log(props)
 
   return (
     <div className="main-menu-component">
@@ -12,7 +13,7 @@ const MainMenu = (props) => {
         <li><Link onClick={handleClickMenu} to='/dashboard'>{'ダッシュボード'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/list'>{'リスト'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/input'>{'入力する'}</Link></li>
-        { props.user ? (
+        { (props.userManager.user != undefined) ? (
           <li><Link onClick={handleClickMenu} to='/mypage'>{'マイページ'}</Link></li>
         ) : (
           null
