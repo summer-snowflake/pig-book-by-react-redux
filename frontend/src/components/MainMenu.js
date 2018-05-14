@@ -12,8 +12,8 @@ const MainMenu = (props) => {
         <li><Link onClick={handleClickMenu} to='/dashboard'>{'ダッシュボード'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/list'>{'リスト'}</Link></li>
         <li><Link onClick={handleClickMenu} to='/input'>{'入力する'}</Link></li>
-        { props.store.user ? (
-          <li><Link onClick={handleClickMenu} to='/mypage'>{props.store.user.auth.name}</Link></li>
+        { props.user ? (
+          <li><Link onClick={handleClickMenu} to='/mypage'>{'マイページ'}</Link></li>
         ) : (
           null
         )}
@@ -27,7 +27,7 @@ const MainMenu = (props) => {
 // TODO: 効果について要確認
 MainMenu.propTypes = {
   actions: PropTypes.func,
-  store: PropTypes.object
+  user: PropTypes.object
 }
 
 export default MainMenu

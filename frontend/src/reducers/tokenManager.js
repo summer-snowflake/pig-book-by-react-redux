@@ -5,8 +5,7 @@ const initialAppState = false
 function tokenManager(state = initialAppState, action) {
   switch (action.type) {
   case SET_ACCESS_TOKEN: {
-    let token = 'aAAA'
-    localStorage.setItem('access_token', token)
+    localStorage.setItem('access_token', action.token)
     return true
   }
   default:

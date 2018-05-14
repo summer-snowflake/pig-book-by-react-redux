@@ -4,12 +4,12 @@ import { Redirect } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { setAccessToken } from './../../actions'
-
-//import Categories from './../../components/categories/categories'
+import queryString from 'query-string'
 
 class SignInContainer extends React.Component {
   componentWillMount() {
-    this.props.actions.setAccessToken()
+    let token = queryString.parse(this.props.location.search).oauth_token
+    this.props.actions.setAccessToken(token)
   }
 
   render() {
@@ -32,7 +32,8 @@ function mapDispatch(dispatch) {
 }
 
 SignInContainer.propTypes = {
-  actions: PropTypes.func.required
+  actions: PropTypes.func.isRequired,
+  location: PropTypes.object.isRequired
 }
 
 export default connect(mapState, mapDispatch)(SignInContainer)

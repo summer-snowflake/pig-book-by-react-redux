@@ -19,7 +19,8 @@ class MainMenuContainer extends React.Component {
 }
 
 const mapState = (store) => ({
-  store: store.mainMenu
+  linkType: store.mainMenu,
+  user: store.userManager
 })
 
 
