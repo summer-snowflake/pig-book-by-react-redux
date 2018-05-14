@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 const MainMenu = (props) => {
   let handleClickMenu = props.actions.render
-  console.log(props)
 
   return (
     <div className="main-menu-component">
@@ -28,7 +27,7 @@ const MainMenu = (props) => {
 // TODO: 効果について要確認
 MainMenu.propTypes = {
   actions: PropTypes.func,
-  user: PropTypes.object
+  userManager: PropTypes.object
 }
 
 export default MainMenu
