@@ -11,6 +11,7 @@ feature 'リスト', js: true do
   end
 
   scenario 'メニューのリストをクリックしてリスト画面が表示されること' do
+    pending 'email認証のログイン機能ができるまで'
     visit root_path
     click_on 'リスト'
     within '.main-content-component' do

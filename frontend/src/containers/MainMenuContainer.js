@@ -1,19 +1,41 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { render } from './../actions'
+import { render, getCurrentUser, logout } from './../actions'
 
 import MainMenu from './../components/MainMenu'
 
+class MainMenuContainer extends React.Component {
+  componentWillMount() {
+    this.props.actions.getCurrentUser()
+  }
+
+  render() {
+    return (
+      <MainMenu {...this.props} />
+    )
+  }
+}
+
 const mapState = (store) => ({
-  types: store.mainMenu
+  mainMenu: store.mainMenu,
+  userManager: store.userManager
 })
+
 
 function mapDispatch(dispatch) {
   return {
     actions: bindActionCreators({
-      render
+      render,
+      getCurrentUser,
+      logout
     }, dispatch)
   }
 }
 
-export default connect(mapState, mapDispatch)(MainMenu)
+MainMenuContainer.propTypes = {
+  actions: PropTypes.func
+}
+
+export default connect(mapState, mapDispatch)(MainMenuContainer)
