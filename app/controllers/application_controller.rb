@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= authenticate_with_http_token do |token, _options|
-      User.find_by(access_token: token)
+      User.find_by(status: :registered, access_token: token)
     end
   end
 end

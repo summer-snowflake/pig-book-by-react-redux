@@ -7,7 +7,7 @@ class Auth < ApplicationRecord
 
   def self.find_or_create_for_oauth!(oauth)
     auth = find_or_initialize_by(uid: oauth[:uid])
-    user = auth.user || User.create
+    user = auth.user || User.create_with_provider_auth
     auth.update_attributes!(
       user: user,
       provider: oauth[:provider],
