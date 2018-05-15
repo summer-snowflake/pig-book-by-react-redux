@@ -10,9 +10,13 @@ export const setAccessToken = (token) => {
   return { type: types.SET_ACCESS_TOKEN, token: token }
 }
 
-export const getCurrentUser = () => {
-  let token = localStorage.getItem('access_token')
-  let loginHeaders = { headers: { Authorization: 'Token token=' + token } }
+export const logout = () => {
+  return { type: types.REMOVE_ACCESS_TOKEN }
+}
+
+export const getCurrentUser = (token) => {
+  let access_token = token || localStorage.getItem('access_token')
+  let loginHeaders = { headers: { Authorization: 'Token token=' + access_token } }
   return (dispatch) => {
     dispatch(getUserRequest())
     return axios.get('/api/user', loginHeaders)

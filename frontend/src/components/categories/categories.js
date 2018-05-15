@@ -9,7 +9,7 @@ const Categories = (props) => {
           {'カテゴリの管理'}
         </div>
         <ul>
-          {props.categories.map((category) => (
+          {props.categoriesManager.categories.map((category) => (
             <li key={category.id}>{category.name}</li>
           ))}
         </ul>
@@ -20,7 +20,7 @@ const Categories = (props) => {
 
 Categories.propTypes = {
   actions: PropTypes.func.isRequired,
-  categories: PropTypes.object.isRequired
+  categoriesManager: PropTypes.object.isRequired
 }
 
 export default Categories

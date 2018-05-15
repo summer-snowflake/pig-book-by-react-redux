@@ -19,7 +19,7 @@ class CategoriesContainer extends React.Component {
 }
 
 const mapState = (store) => ({
-  categories: store.categoriesManager
+  categoriesManager: store.categoriesManager
 })
 
 function mapDispatch(dispatch) {

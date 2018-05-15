@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { render, getCurrentUser } from './../actions'
+import { render, getCurrentUser, logout } from './../actions'
 
 import MainMenu from './../components/MainMenu'
 
@@ -28,7 +28,8 @@ function mapDispatch(dispatch) {
   return {
     actions: bindActionCreators({
       render,
-      getCurrentUser
+      getCurrentUser,
+      logout
     }, dispatch)
   }
 }

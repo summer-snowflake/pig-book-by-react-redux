@@ -3,30 +3,33 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { setAccessToken } from './../../actions'
+import { setAccessToken, getCurrentUser } from './../../actions'
 import queryString from 'query-string'
 
 class SignInContainer extends React.Component {
   componentWillMount() {
     let token = queryString.parse(this.props.location.search).oauth_token
     this.props.actions.setAccessToken(token)
+    this.props.actions.getCurrentUser(token)
   }
 
   render() {
     return (
-      <Redirect to='/' />
+      <Redirect to='/mypage' />
     )
   }
 }
 
 const mapState = (store) => ({
-  store: store.tokenManager
+  userManager: store.userManager,
+  tokenManager: store.tokenManager
 })
 
 function mapDispatch(dispatch) {
   return {
     actions: bindActionCreators({
-      setAccessToken
+      setAccessToken,
+      getCurrentUser
     }, dispatch)
   }
 }
