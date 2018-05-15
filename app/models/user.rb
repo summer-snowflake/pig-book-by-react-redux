@@ -2,6 +2,7 @@
 
 class User < ApplicationRecord
   has_one :auth, dependent: :destroy
+  has_one :profile, dependent: :destroy
   has_many :categories, dependent: :destroy
 
   enum status: { inactive: 1, registered: 2 }
