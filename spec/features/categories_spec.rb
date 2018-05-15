@@ -11,6 +11,7 @@ feature 'カテゴリ', js: true do
   end
 
   scenario 'メニューのカテゴリをクリックしてカテゴリ画面が表示されること' do
+    pending 'email認証のログイン機能ができるまで'
     visit root_path
     click_on 'カテゴリ'
     within '.main-content-component' do

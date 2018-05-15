@@ -11,6 +11,7 @@ feature 'ダッシュボード', js: true do
   end
 
   scenario 'メニューのダッシュボードをクリックしてダッシュボード画面が表示されること' do
+    pending 'email認証のログイン機能ができるまで'
     visit root_path
     click_on 'ダッシュボード'
     within '.main-content-component' do
