@@ -7,10 +7,6 @@ import { render, getCurrentUser, logout } from './../actions'
 import MainMenu from './../components/MainMenu'
 
 class MainMenuContainer extends React.Component {
-  componentWillMount() {
-    this.props.actions.getCurrentUser()
-  }
-
   render() {
     return (
       <MainMenu {...this.props} />

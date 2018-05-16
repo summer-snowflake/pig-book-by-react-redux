@@ -1,4 +1,4 @@
-import { RENDER, SET_ACCESS_TOKEN, REMOVE_ACCESS_TOKEN } from './../utils/actionTypes.js'
+import { RENDER, SET_ACCESS_TOKEN, REMOVE_ACCESS_TOKEN, GET_USER_FAILURE } from './../utils/actionTypes.js'
 
 const initialAppState = {
   value: '',
@@ -11,6 +11,11 @@ function mainMenu(state = initialAppState, action) {
     localStorage.setItem('access_token', action.token)
     return { token: action.token }
   case REMOVE_ACCESS_TOKEN:
+    localStorage.removeItem('access_token')
+    return Object.assign({}, state, {
+      value: '', token: ''
+    })
+  case GET_USER_FAILURE:
     localStorage.removeItem('access_token')
     return Object.assign({}, state, {
       value: '', token: ''

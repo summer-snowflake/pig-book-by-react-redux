@@ -7,6 +7,7 @@ import Input from './input'
 import List from './list'
 import Categories from './../containers/categories/categoriesContainer'
 import Login from './account/login'
+import Mypage from './account/mypage'
 import SignIn from './../containers/account/signInContainer'
 import SignOut from './../containers/account/signOutContainer'
 
@@ -20,6 +21,7 @@ const MainContent = () => {
         <Route component={List} exact path='/list' />
         <Route component={Categories} exact path='/categories' />
         <Route component={Login} exact path='/login' />
+        <Route component={Mypage} exact path='/mypage' />
         <Route component={SignIn} exact path='/sign_in' />
         <Route component={SignOut} exact path='/logout' />
       </Switch>
