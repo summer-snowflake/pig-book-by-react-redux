@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 const MainMenu = (props) => {
   let handleClickMenu = props.actions.render
-  let handleClickLogoutLink = props.actions.logout
   // NOTE: ログアウトしていない場合に存在する
   let token = localStorage.getItem('access_token')
 
@@ -19,7 +18,7 @@ const MainMenu = (props) => {
             <li><Link onClick={handleClickMenu} to='/input'>{'入力する'}</Link></li>
             <li><Link onClick={handleClickMenu} to='/mypage'>{'マイページ'}</Link></li>
             <li><Link onClick={handleClickMenu} to='/categories'>{'カテゴリ'}</Link></li>
-            <li><Link onClick={handleClickLogoutLink} to='/logout'>{'ログアウト'}</Link></li>
+            <li><Link onClick={handleClickMenu} to='/logout'>{'ログアウト'}</Link></li>
           </span>
         ) : (
           <li><Link onClick={handleClickMenu} to='/login'>{'ログイン'}</Link></li>
