@@ -10,7 +10,7 @@ class User < ApplicationRecord
   def self.find_or_create_for_oauth(oauth, token)
     ActiveRecord::Base.transaction do
       auth = Auth.find_or_create_for_oauth!(oauth)
-      auth.user.update!(access_token: token)
+      auth.user.update!(access_token: token, status: :registered)
     end
   end
 

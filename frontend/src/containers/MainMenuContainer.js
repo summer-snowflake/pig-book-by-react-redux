@@ -8,7 +8,9 @@ import MainMenu from './../components/MainMenu'
 
 class MainMenuContainer extends React.Component {
   componentWillMount() {
-    this.props.actions.getCurrentUser()
+    // TODO: urlがsign_inの際には実行しないようにする
+    console.log(this.props.url)
+    //this.props.actions.getCurrentUser()
   }
 
   render() {
