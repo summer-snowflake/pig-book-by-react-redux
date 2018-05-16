@@ -5,12 +5,14 @@ import PropTypes from 'prop-types'
 const MainMenu = (props) => {
   let handleClickMenu = props.actions.render
   let handleClickLogoutLink = props.actions.logout
+  // NOTE: ログアウトしていない場合に存在する
+  let token = localStorage.getItem('access_token')
 
   return (
     <div className="main-menu-component">
       <ul>
         <li><Link onClick={handleClickMenu} to='/'>{'HOME'}</Link></li>
-        { (Object.keys(props.userManager.user).length > 0) ? (
+        { (Object.keys(props.userManager.user).length > 0 || token) ? (
           <span>
             <li><Link onClick={handleClickMenu} to='/dashboard'>{'ダッシュボード'}</Link></li>
             <li><Link onClick={handleClickMenu} to='/list'>{'リスト'}</Link></li>
